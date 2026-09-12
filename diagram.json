@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "author": "Velxio",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potentiometer_1789218943930_mn6ud17eu",
+      "top": 21,
+      "left": -100,
+      "attrs": {
+        "min": 0,
+        "max": 1023,
+        "value": 906,
+        "step": 1,
+        "startDegree": -135,
+        "endDegree": 135
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_1789218993744_hpxahovom",
+      "top": -123,
+      "left": -49,
+      "attrs": {
+        "value": false,
+        "brightness": 1,
+        "color": "red",
+        "lightColor": null,
+        "label": "",
+        "flip": false
+      }
+    },
+    {
+      "type": "wokwi-resistor-220",
+      "id": "resistor_220_1789219036535_zh9kam8b9",
+      "top": -98,
+      "left": 44,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "potentiometer_1789218943930_mn6ud17eu:VCC",
+      "uno:5V",
+      "#cc0000",
+      []
+    ],
+    [
+      "potentiometer_1789218943930_mn6ud17eu:SIG",
+      "uno:A0",
+      "#22c55e",
+      []
+    ],
+    [
+      "potentiometer_1789218943930_mn6ud17eu:GND",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "led_1789218993744_hpxahovom:A",
+      "resistor_220_1789219036535_zh9kam8b9:1",
+      "#22c55e",
+      []
+    ],
+    [
+      "resistor_220_1789219036535_zh9kam8b9:2",
+      "uno:9",
+      "#22c55e",
+      []
+    ],
+    [
+      "led_1789218993744_hpxahovom:C",
+      "uno:GND.1",
+      "black",
+      []
+    ]
+  ]
+}
